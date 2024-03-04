@@ -1,0 +1,21 @@
+
+
+<script>
+    //comunicaçao AJAX
+   var dados = new FormData(document.getElementById('form1')) //pega os dados
+   var ajax  = new XMLHttpRequest(); //criar o objeto //cria conexao
+   ajax.open("POST", "teste.html", true); //metodo, onde buscar os dados, fazer novas conexoes //envia os dados
+   ajax.send(dados);
+
+   ajax.onreadystatechange = function(){
+    //4 -> recebeu a resposta, estados numerados do http
+        if (ajax.readyState == 4 && ajax.status == 200){
+            var resultado = ajax.responseText;
+            alert(resultado);
+        }
+
+   }//monitorar se o estado dele mudou
+
+   //xamp, jquery, ajax
+</script>
+<p>larissa</p>
