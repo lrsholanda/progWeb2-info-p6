@@ -1,0 +1,34 @@
+<?php
+//echo "Olá";
+//$teste =1;
+
+$produtos = [];
+$resultado = [];
+conexao = mysqli_connect("localhost", "root", "", "aula0104"); //servidor, usuario, senha, banco de dados
+$bd = mysqli_query(conexao, "select * from produtos");
+
+while9$linha = mysqli_fetch_array($bd)){
+$produtos["nome"]= $linha["nome"];
+$produtos["preco"]= $linha["preco"];
+array_push($resultado, $produtos);
+
+};
+
+//echo $linha["nome"];
+
+/*$produtos["nome"]= "laranja";
+$produtos["preco"]= "1.5";
+array_push($resultado, $produtos);
+
+$produtos["nome"]= "maçã";
+$produtos["preco"]= "5";
+array_push($resultado, $produtos);
+
+echo "<pre>";
+print_r(json_encode($resultado));*/
+
+//echo $teste[0];
+//print_r($produto);
+//echo "<br>";
+//echo json_encode($produto);
+?>
